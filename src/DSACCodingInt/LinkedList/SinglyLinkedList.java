@@ -44,5 +44,35 @@ public void displayLinkList(){
     }
 }
 
+    public void displayLinkList(Node node){
+        Node current = node;
+        if(current==null) {
+            System.out.println("List is empty");
+        }else {
+            while (current.next != null) {
+                System.out.print(current.data + " -> ");
+                current = current.next;
+            }
+            System.out.print(""+current.data);
+            System.out.println();
+        }
+    }
+
+public Node getLinkList(int[] arr){
+    Node fst = new Node(arr[0]);
+    Node local = fst;
+    int i=1;
+
+    while(i<arr.length-1){
+        Node node = new Node(arr[i]);
+        local.next=node;
+        local=local.next;
+        i++;
+    }
+    local.data=arr[arr.length-1];
+    local.next=null;
+    return fst;
+}
+
 
 }
