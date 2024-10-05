@@ -39,7 +39,11 @@ public class FindListIntersection {
 
         singlyLinkedList.displayLinkList(a);
         singlyLinkedList.displayLinkList(b);
-        System.out.println("Intersection is : "+f.findListIntersection(a,b));
+        SinglyLinkedList.Node x = singlyLinkedList.getLinkList(new int[]{20,90,80,60});
+        SinglyLinkedList.Node y = singlyLinkedList.getLinkList(new int[]{0,901,30,77});
+        singlyLinkedList.displayLinkList(x);
+        singlyLinkedList.displayLinkList(y);
+        System.out.println("Intersection is : "+f.findListIntersection(x,y));
 
 
 
