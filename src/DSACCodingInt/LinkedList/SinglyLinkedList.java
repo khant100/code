@@ -63,16 +63,26 @@ public Node getLinkList(int[] arr){
     Node local = fst;
     int i=1;
 
-    while(i<arr.length-1){
+    while(i<arr.length){
         Node node = new Node(arr[i]);
         local.next=node;
         local=local.next;
         i++;
     }
-    local.data=arr[arr.length-1];
-    local.next=null;
+//    local.data=arr[arr.length-1];
+//    local.next=null;
     return fst;
 }
 
+public int getSize(Node fst){
+    int size =0;
+    Node curr = fst;
+    while (curr!=null){
+        size++;
+        curr=curr.next;
+
+    }
+    return size;
+}
 
 }
