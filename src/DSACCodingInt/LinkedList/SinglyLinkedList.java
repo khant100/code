@@ -2,7 +2,7 @@ package DSACCodingInt.LinkedList;
 
 public class SinglyLinkedList {
 
-class Node{
+static class Node{
     Node next;
     int data;
 
