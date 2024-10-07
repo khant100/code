@@ -3,7 +3,7 @@ package JavaConcept;
 import java.util.ArrayDeque;
 import java.util.Queue;
 
-public class ArrayDeQueue {
+public class ArrayDeQueue<T> {
 
   //  Queue<int[]> queue = new ArrayDeque<>();
     public static void main(String[] args) {
