@@ -20,7 +20,7 @@ public class Problem1 {
 
         String max = List.of(arry).stream()
                 .max(Comparator.comparingInt(String::length).
-                        thenComparing(x->Arrays.asList(arry).indexOf(x))).get();
+                        thenComparing(x->-Arrays.asList(arry).indexOf(x))).get();
 
 
         System.out.println("mix: "+min+"  max: "+max);

@@ -17,6 +17,10 @@ public class Fibonacci {
                 .limit(10).map(f->f[0])
                 .forEach(x->System.out.println(""+x));
 
+        Stream.iterate(new int[]{1,1},f->new int[]{f[1],f[0]+f[1]}).limit(9)
+                .map(f->f[0])
+                .forEach(x->System.out.print(" "+x));
+
 
 
     }
