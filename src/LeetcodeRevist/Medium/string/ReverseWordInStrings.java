@@ -1,4 +1,4 @@
-package LeetcodeRevist;
+package LeetcodeRevist.Medium.string;
 
 public class ReverseWordInStrings {
 
