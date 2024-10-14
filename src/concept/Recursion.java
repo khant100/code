@@ -5,9 +5,9 @@ public class Recursion {
     //print N to 1 using recursion
     // print 5 times using recursion
 
-    public int c=0;
+    public int c=5;
     public void print1ToN(int N){
-        if(N==0){
+        if(N<1){
             return;
         }
         System.out.print(" "+N);
@@ -30,12 +30,14 @@ public class Recursion {
     }
 // Non parametrised print
     public void printNTime(){
-        if(c==5){
+        if(c<1){
             return;
         }
+
         System.out.print("-> "+c);
-        c=c+1;
+        c=c-1;
         printNTime();
+
     }
 
 
