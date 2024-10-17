@@ -22,10 +22,6 @@ public class PrintSubSequence{
             path.add(given[index]);
             subsequence(given,index+1,path);
             path.remove(path.size()-1);
-
-
-
-
         }
         return;
     }

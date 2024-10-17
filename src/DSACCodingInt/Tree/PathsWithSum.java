@@ -3,6 +3,8 @@ package DSACCodingInt.Tree;
 import DSACCodingInt.BST;
 import DSACCodingInt.TreeNode;
 
+import java.util.HashMap;
+
 /**
  *
  * Problem: You are implementing a binary search tree class from scratch, which,
@@ -43,6 +45,36 @@ public class PathsWithSum {
         return totalpath;
     }
 
+
+    public int countPathWithSumHash(int target,TreeNode root){
+        return countPathWithSumHashMap(target,0,root,new HashMap<Integer,Integer>());
+    }
+
+    public  int countPathWithSumHashMap(int target,int runingSum,TreeNode root,HashMap<Integer,Integer> map){
+        if(root==null){
+            return 0;
+        }
+        runingSum+=root.Data;
+        int sum = runingSum-target;
+        int totalpath = map.getOrDefault(sum,0);
+        if(runingSum==target){
+            totalpath++;
+        }
+        incrementMap(sum,map,1);
+        totalpath+=countPathWithSumHashMap(target,runingSum,root.left,map);
+        totalpath+=countPathWithSumHashMap(target,runingSum,root.right,map);
+        incrementMap(sum,map,-1);
+
+        return totalpath;
+    }
+    public void incrementMap(int key,HashMap<Integer,Integer> map,int path){
+        int newcount = map.getOrDefault(key,0)+1;
+        if(newcount==0){
+            map.remove(key);
+        }else{
+            map.put(key,newcount);
+        }
+    }
     public static void main(String args[]){
 
         BST bst = new BST();
@@ -54,6 +86,7 @@ public class PathsWithSum {
         bst.root.right.right = new TreeNode(9);
         PathsWithSum ps = new PathsWithSum();
         System.out.println(ps.countPathWithSums(bst.root,6));
+        System.out.println(ps.countPathWithSumHash(6,bst.root));
 
 
     }
