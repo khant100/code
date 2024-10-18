@@ -17,11 +17,11 @@ public class PrintSubSequence{
                 System.out.println(path);
             }
         }else {
-
-            subsequence(given,index+1,path);
             path.add(given[index]);
             subsequence(given,index+1,path);
             path.remove(path.size()-1);
+            subsequence(given,index+1,path);
+
         }
         return;
     }
