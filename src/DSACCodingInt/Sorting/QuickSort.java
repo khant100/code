@@ -44,9 +44,13 @@ private static void swap(int[] arr,int big, int end){
 }
     public static void main(String[] args){
         int[] nums = { 3, 2, 1, 12, 4, 5, 3 };
+        int[] nums1 = {4,6,2,5,7,9,1,3};
+
         System.out.println(Arrays.toString(nums));
         Quicksort(nums,0,nums.length-1);
+        Quicksort(nums1,0,nums1.length-1);
         System.out.println(Arrays.toString(nums));
+        System.out.println(Arrays.toString(nums1));
 
     }
 }
