@@ -8,9 +8,9 @@ public class SubSetSumWithDupli {
     // given arry with duplicates return all subsets without duplicate
     public static void subSetWDup(int[] arr,int index,int n,ArrayList<ArrayList<Integer>> ans,ArrayList<Integer> temp){
         ans.add(new ArrayList<>(temp));
-        if(index==n){
-            return;
-        }
+//        if(index==n){
+//            return;
+//        }
 
         for(int i=index;i<n;i++){
            if(i>index&&arr[i]==arr[i-1])continue;
