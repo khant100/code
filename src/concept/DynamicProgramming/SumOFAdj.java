@@ -39,6 +39,22 @@ public class SumOFAdj {
 
         return dp[given.length-1];
     }
+
+   public static int spaceOptimize(int[] given){
+
+        int prev2=0;
+        int prev =given[0];
+
+        for(int i=1;i<given.length;i++){
+            int pick = prev2+given[i];
+            int unpick = prev;
+            int curr = Math.max(pick,unpick);
+            prev2=prev;
+            prev=curr;
+        }
+        return prev;
+
+   }
     public static void main(String args[]){
 
         int[] given = {2, 1, 4, 9};
@@ -47,6 +63,7 @@ public class SumOFAdj {
         Arrays.fill(dp,-1);
        System.out.println( sumAdjecent(given,given.length-1,dp));
         System.out.println( sumTabulation(given,dp1));
+        System.out.println(spaceOptimize(given));
 
     }
 
