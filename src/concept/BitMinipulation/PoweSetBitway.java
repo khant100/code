@@ -12,9 +12,11 @@ public class PoweSetBitway {
             List<Integer> lis = new ArrayList<>();
             for(int j=0;j<arr.length;j++){
                 if((i&(1<<j))!=0){
+                    System.out.println(" i= "+i+" j= "+j+" 1<<j= "+(1<<j)+" arr[j]= "+arr[j]);
                     lis.add(arr[j]);
                 }
             }
+            System.out.println();
             result.add(lis);
         }
     }
