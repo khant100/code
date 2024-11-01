@@ -49,6 +49,30 @@ public class SwapOperationWithBit {
         // to use & operation and return value
         return (n&~(1<<i));
     }
+
+    public static int toggleIthBitRight(int n,int i){
+        // take 1 and do a left shift to ith position
+        // use XOR operator  to toggal ith bit to 0
+        //In order to toggle ith bit of n integer we need
+        // to use ^ operation and return value
+        return (n^(1<<i));
+    }
+
+    public static int RemovelastsetDigit(int n){
+        // take n and n-1  number
+        // use AND operation
+        //use n&n-1 to remove last set bit
+
+        return (n&(n-1));
+    }
+
+    public static boolean checkIfPowerOf2(int n){
+        // take n and n-1  number
+        // use AND operation
+        //use n&n-1 to remove last set bit
+
+        return (n&(n-1))==0;
+    }
     public static void main(String args[]){
 
 
@@ -65,7 +89,11 @@ public class SwapOperationWithBit {
         System.out.println( "Ith bit set to "+1+" which is "+setIthBitRight(13,2));
         System.out.println( "Ith bit clear to "+0+" which is "+clearIthBitRight(13,2));
         System.out.println( "Ith bit clear to "+0+" which is "+clearIthBitRight(13,1));
-
-
+        System.out.println( "Ith bit toggle to if 1 its 0 , if 0 it converts to 1 which is "+toggleIthBitRight(13,2));
+        System.out.println( "Ith bit toggle to if 1 its 0 , if 0 it converts to 1 which is "+toggleIthBitRight(13,1));
+        System.out.println("check if power of 2"+checkIfPowerOf2(64));
+        System.out.println("check if power of 2"+checkIfPowerOf2(20));
+        System.out.println("Remove last set digit"+RemovelastsetDigit(13));
+        System.out.println("check if power of 2"+RemovelastsetDigit(20));
     }
 }
