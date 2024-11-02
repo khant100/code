@@ -13,6 +13,7 @@ public class PoweSetBitway {
             for(int j=0;j<arr.length;j++){
                 if((i&(1<<j))!=0){
                     System.out.println(" i= "+i+" j= "+j+" 1<<j= "+(1<<j)+" arr[j]= "+arr[j]);
+                    System.out.println("(i&(1<<j))= "+(i&(1<<j)));
                     lis.add(arr[j]);
                 }
             }
