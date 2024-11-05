@@ -9,7 +9,10 @@ public class TwoSingleNumber {
     // having xor with all numbers in array so all number occuring
     // even number of times will cancle eachother
     // finally it will be xor of 2 number occuring odd number of  times
-    //
+    // so both since they both are unique number there will be difference of atleat 1 setbit
+    // xor & xor-1 will eliminate right most part of number
+    //doing xor ^  xor will provide us with right most part
+    // eg 10 1010 (1010 & 1001) = (1000) =8 (8 ^ 10) =(1000 ^ 1010)=(0010)=2 2 is right most part
     public static int[] findTwoNumber(int[] arr){
         int xor = 0;
         for(int a : arr){
