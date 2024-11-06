@@ -18,7 +18,7 @@ public class BracketsValis {
 
             if(c=='{'||c=='['||c=='('){
                 stack.push(c);
-            } else if (c=='}'&& !stack.isEmpty() && stack.peek()=='{'&&!stack.isEmpty()) {
+            } else if (c=='}'&& !stack.isEmpty() && stack.peek()=='{') {
                 stack.pop();
             }
             else if (c==']'&& !stack.isEmpty() && stack.peek()=='[') {
@@ -45,6 +45,7 @@ public class BracketsValis {
 
         String s = "(([{}]))[][]";
         String s1 = "(([{}])]";
+        System.out.println("]["+"->"+bras.Valid("]["));
         System.out.println(s+"->"+bras.Valid(s));
         System.out.println(s1+"->"+bras.Valid(s1));
 

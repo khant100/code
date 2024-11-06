@@ -95,5 +95,8 @@ public class SwapOperationWithBit {
         System.out.println("check if power of 2"+checkIfPowerOf2(20));
         System.out.println("Remove last set digit"+RemovelastsetDigit(13));
         System.out.println("check if power of 2"+RemovelastsetDigit(20));
+        int num=70 ;
+        int i=3;
+        System.out.println(""+(num&(1<<i))+" "+(num|(1<<i))+" "+(num&(~(1<<i))));
     }
 }
