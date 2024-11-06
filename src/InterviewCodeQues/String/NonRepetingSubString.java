@@ -23,16 +23,13 @@ public  int longSubString(String s){
         max = Math.max(max,right-left);
 
     }
-
     return max;
 }
 
     public static void main(String[] args) {
-    NonRepetingSubString n = new NonRepetingSubString();
-    System.out.println(n.longSubString("abcabcab"));
+        NonRepetingSubString n = new NonRepetingSubString();
+        System.out.println(n.longSubString("abcabcab"));
         System.out.println(n.longSubString("bbb"));
         System.out.println(n.longSubString("pkwepwka"));
-
-
     }
 }
