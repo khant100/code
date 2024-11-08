@@ -10,7 +10,7 @@ public class Main {
     public static void main(String[] args) {
 
         Employee e1 = new Employee("ram","e123",1500000);
-        Employee e6 = new Employee("ram","e123",1500000);
+        Employee e6 = new Employee("ram","e123",150000);
         Employee e2 = new Employee("shyam","e456",250000);
         Employee e3 = new Employee("raghu","e789",250000);
         Employee e4 = new Employee("Rahul","e100",100000);
@@ -19,6 +19,7 @@ public class Main {
         Employee e7 = new Employee("Raj","e100",200000);
 
         List<Employee> lemp = List.of(e1,e2,e3,e4,e5,e6,e7,e8);
+        List<Employee> empList = List.of(e1,e2,e3,e4,e5,e6,e7,e8);
                 //new ArrayList<>();
 //        lemp.add(e1);
 //        lemp.add(e2);
@@ -26,6 +27,8 @@ public class Main {
 //        lemp.add(e4);
 
         List<Employee> remp = lemp.stream().sorted(Comparator.comparing(e->e.getSal())).collect(Collectors.toList());
+       System.out.println("------>"+empList.stream().sorted(Comparator.comparing(Employee::getSal))
+               .collect(Collectors.toList()).get(empList.size()-2));
         System.out.println("Third Higest  "+lemp.stream()
                 .collect(Collectors.groupingBy(x->x.getSal(),Collectors.mapping(x->x.getName(),Collectors.toList())))
                 .entrySet().stream().sorted(Comparator.comparing(x->-x.getKey())).collect(Collectors.toList()).get(2));
