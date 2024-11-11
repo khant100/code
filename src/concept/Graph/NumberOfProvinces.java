@@ -1,10 +1,8 @@
-package DSACCodingInt.Graph;
+package concept.Graph;
 
 import java.util.ArrayList;
 
 public class NumberOfProvinces {
-
-
     public int numOFProv(ArrayList<ArrayList<Integer>> adj , int v){
         ArrayList<ArrayList<Integer>> adjl = new ArrayList<>();
 
@@ -19,17 +17,18 @@ public class NumberOfProvinces {
                 }
             }
         }
-adjl.stream().forEach(x->System.out.println(x));
-        int[] vis = new int[v];
-        int cnt=0;
-        for (int i=0;i<v;i++){
-            if(vis[i]==0){
-                cnt++;
-                dfs(vis,i,adjl);
+            //adjl.stream().forEach(x->System.out.println(x));
+        // space complexity o(N) +o(N)
+        // time complexity o(n) +o(V+2E)
+            int[] vis = new int[v];
+            int cnt=0;
+                for (int i=0;i<v;i++){
+                    if(vis[i]==0){
+                        cnt++;
+                    dfs(vis,i,adjl);
+                }
             }
-        }
-
-return cnt;
+        return cnt;
     }
 
 private void dfs(int[] v,int node,ArrayList<ArrayList<Integer>> adjs){
