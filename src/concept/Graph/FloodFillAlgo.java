@@ -69,6 +69,9 @@ public class FloodFillAlgo {
                 {1, 1, 0},
                 {1, 0, 1}
         };
+        //worst case complexity is n*M
+        // for x numer of nodes we are travelling (x*4) = approx O(x) =(m*N) time complexity//
+        // space complexity o(n*m) +(n*M) + delta(row) +delta(colum)
 
    printArray(floodFill(image,1,1,2));
     printArray(floodFillDfs(image,1,1,2));
