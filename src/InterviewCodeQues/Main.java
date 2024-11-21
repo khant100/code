@@ -17,14 +17,15 @@ public class Main {
         Employee e5 = new Employee("Rahul","e100",200000);
         Employee e8 = new Employee("Raman","e100",200000);
         Employee e7 = new Employee("Raj","e100",200000);
+        Employee e11 = new Employee("Ramu","e101",230000);
+        Employee e9 = new Employee("Kishor","e102",210000);
+        Employee e10 = new Employee("Miten","e103",220000);
+
 
         List<Employee> lemp = List.of(e1,e2,e3,e4,e5,e6,e7,e8);
         List<Employee> empList = List.of(e1,e2,e3,e4,e5,e6,e7,e8);
-                //new ArrayList<>();
-//        lemp.add(e1);
-//        lemp.add(e2);
-//        lemp.add(e3);
-//        lemp.add(e4);
+        List<Employee> empListU = List.of(e1,e6,e3,e4,e5,e11,e9,e10);
+ System.out.println(empListU.stream().sorted(Comparator.comparingInt(Employee::getSal).reversed()).limit(5).skip(4).collect(Collectors.toList()));
 
         List<Employee> remp = lemp.stream().sorted(Comparator.comparing(e->e.getSal())).collect(Collectors.toList());
        System.out.println("------>"+empList.stream().sorted(Comparator.comparing(Employee::getSal))
