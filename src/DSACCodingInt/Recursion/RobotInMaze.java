@@ -72,14 +72,15 @@ public class RobotInMaze {
         }
 
         RobotInMaze rb = new RobotInMaze();
+        maze[1][1]=false;
+        maze[0][1]=false;
         rb.robotPath(maze).stream().forEach(x->System.out.println(x));
         List<List<Point>> result = new ArrayList<>();
         rb.findAllPath(maze,0,0,result,new ArrayList<>());
         System.out.println("---------------->All Paths");
         result.stream().forEach(x->System.out.println(x));
 
-        maze[1][1]=false;
-        maze[0][1]=false;
+
         rb.robotPath(maze).stream().forEach(x->System.out.println(x));
         result.stream().forEach(x->System.out.println(x));
 
