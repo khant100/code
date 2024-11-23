@@ -38,15 +38,15 @@ public class AllpermutationOfStringNoDuplicate {
 
     }
 
-    private String swap(int i,int j,String s){
-
-       char[] a = s.toCharArray();
-       char c=a[i];
-       a[i]=a[j];
-       a[j]=c;
-      s= Arrays.toString(a);
-      return s;
-    }
+//    private String swap(int i,int j,String s){
+//
+//       char[] a = s.toCharArray();
+//       char c=a[i];
+//       a[i]=a[j];
+//       a[j]=c;
+//      s= Arrays.toString(a);
+//      return s;
+//    }
     public static void main(String[] args){
        String s ="abc";
        String g = "xyz";

@@ -57,5 +57,7 @@ if(i==m-1&&j==n-1){
 }
 
 
-    
+//    Time Complexity: O(4^(m*n)), because on every cell we need to try 4 different directions.
+//
+//    Space Complexity:  O(m*n), Maximum Depth of the recursion tree(auxiliary space).
 }
