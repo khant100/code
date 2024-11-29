@@ -12,12 +12,12 @@ public class GroupAnagrams {
     // [
 //   ["ate", "eat","tea"],
 //   ["nat","tan"],
-//   ["bat"]
+//   ["bat","tab"]
 // ]
 // Note: All inputs will be in lower-case.
 
-public static List<List<String >> ana(String[] arr){
-    Map<String, List<String>> anag = new HashMap<>();
+public static List<TreeSet<String >> ana(String[] arr){
+    Map<String, TreeSet<String>> anag = new HashMap<>();
     for(String s: arr){
         char[] ch=  s.toCharArray();
         Arrays.sort(ch);
@@ -26,17 +26,16 @@ public static List<List<String >> ana(String[] arr){
         if(anag.containsKey(sor)){
             anag.get(sor).add(s);
         }else{
-            anag.put(sor,new ArrayList<>());
+            anag.put(sor,new TreeSet<>());
             anag.get(sor).add(s);
         }
     }
-    return new ArrayList<>(anag.values());
+    return new ArrayList<TreeSet<String>>(anag.values());
 }
     public static void main(String args[]){
 
-        String[] arr = {"eat", "tea", "tan", "ate", "nat", "bat"};
-
-        ana(arr).stream().forEach(x->System.out.println(x));
+        String[] arr = {"eat", "tea", "tan", "ate", "nat", "bat","tab" };
+        ana(arr).stream().sorted(Comparator.comparingInt(TreeSet::size)).forEach(x->System.out.println(x));
 
     }
 }
