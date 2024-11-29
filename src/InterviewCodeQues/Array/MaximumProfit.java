@@ -38,7 +38,6 @@ public class MaximumProfit {
     public static int maximumProfit(int[] arr){
         int maxProfit =0;
         int minprice=Integer.MAX_VALUE;
-        int maxPcie =0;
 
         for(int i=0;i<arr.length;i++){
             minprice=Math.min(minprice,arr[i]);
