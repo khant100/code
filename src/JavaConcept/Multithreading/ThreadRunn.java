@@ -1,4 +1,4 @@
-package JavaConcept;
+package JavaConcept.Multithreading;
 
 public class ThreadRunn implements Runnable{
 

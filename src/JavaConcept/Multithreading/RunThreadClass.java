@@ -1,4 +1,4 @@
-package JavaConcept;
+package JavaConcept.Multithreading;
 
 public class RunThreadClass {
     public static void main(String[] args) throws InterruptedException {

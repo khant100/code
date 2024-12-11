@@ -1,4 +1,4 @@
-package concept.SlidingWindow;
+package LeetcodeRevist.Hard.SlidingWindow;
 
 public class MinimumWindowsubString {
 

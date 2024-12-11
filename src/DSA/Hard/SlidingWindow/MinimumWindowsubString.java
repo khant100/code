@@ -1,4 +1,4 @@
-package concept.SlidingWindow;
+package DSA.Hard.SlidingWindow;
 
 public class MinimumWindowsubString {
 

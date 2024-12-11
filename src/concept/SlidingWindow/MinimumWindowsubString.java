@@ -1,5 +1,7 @@
 package concept.SlidingWindow;
 
+import java.util.Arrays;
+
 public class MinimumWindowsubString {
 
 
@@ -44,12 +46,13 @@ public static String minWindow(String s,String t){
     for (char c:cht){
         map[c]++;
     }
-
+   // Arrays.stream(map).forEach(x->System.out.print(x));
     while(right<ch.length){
 
         if(map[ch[right++]]-->0){
             count++;
         }
+
         while(count==t.length()){
             if(right-left<minLen){
                 minLen=right-left;
@@ -62,6 +65,8 @@ public static String minWindow(String s,String t){
         }
 
     }
+
+    Arrays.stream(map).forEach(x->System.out.print(x));
     return minLen==Integer.MAX_VALUE ? new String() : new String(ch,startInd,minLen);
 }
     public static void main(String args[]){

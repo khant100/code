@@ -1,5 +1,4 @@
-package JavaConcept;
-import java.util.concurrent.Executor;
+package JavaConcept.Multithreading;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
