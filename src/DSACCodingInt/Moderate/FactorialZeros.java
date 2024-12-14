@@ -34,7 +34,7 @@ public class FactorialZeros {
 
     public static void main(String args[]){
 
-        for (int i = 1; i < 12; i++) {
+        for (int i = 2; i < 12; i++) {
             System.out.println(i + "! (or " + fact(i) + ") has " + findfac(i) + " zeros");
             System.out.println(i + "! (or " + fact(i) + ") has " + countZero(i) + " zeros");
         }
