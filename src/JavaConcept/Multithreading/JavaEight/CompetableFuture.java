@@ -3,6 +3,15 @@ package JavaConcept.Multithreading.JavaEight;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
 public class CompetableFuture {
+
+   // execute() method of framework
+    // shutDown() shutting down after completion of task
+/// Future Stores  data recived by submit
+// Submit(new Runnable()) return null
+// Submit(new Callable()) return data
+// invokeAny(callable list) returns single data from list of callable objects
+/// invokeall(callable list) returns list of future objects
+//
     private static int data=5;
     public static void main(String[] args) throws ExecutionException, InterruptedException {
         System.out.println("data->"+data);
