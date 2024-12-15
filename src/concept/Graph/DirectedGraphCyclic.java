@@ -6,6 +6,11 @@ import java.util.Queue;
 
 public class DirectedGraphCyclic {
 
+
+    // O(N+2E) +N(o)
+    // o(N)+o(N)
+
+
     private static boolean checkCycle(ArrayList<ArrayList<Integer>> adj,int v,boolean[] vis,int node){
         vis[node]=true;
         Queue<cair> q = new LinkedList<>();
