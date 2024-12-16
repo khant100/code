@@ -1,5 +1,7 @@
 package LeetcodeRevist.easy;
 
+import java.util.Arrays;
+
 public class LongestSubStr {
     //find longest common prefix
 
@@ -8,8 +10,21 @@ public class LongestSubStr {
     //Example 2:
     //
     //Input: strs = ["dog","racecar","car"]
+
     //Output: ""
 
+    public static String longestCommonPrefix1(String[] strs) {
+        Arrays.sort(strs);
+        StringBuilder sb = new StringBuilder();
+
+        for(int i=0;i< Math.min(strs[0].length(),strs[strs.length-1].length());i++){
+            if(strs[0].charAt(i)!=strs[strs.length-1].charAt(i)){
+                return sb.toString();
+            }
+            sb.append(strs[0].charAt(i));
+        }
+        return sb.toString();
+    }
     public static String longestCommonPrefix(String[] strs) {
        String prefix= strs[0];
 
@@ -28,5 +43,7 @@ public class LongestSubStr {
 
         System.out.println(longestCommonPrefix(s1));
         System.out.println(longestCommonPrefix(s2));
+        System.out.println(longestCommonPrefix1(s1));
+        System.out.println(longestCommonPrefix1(s2));
     }
 }
