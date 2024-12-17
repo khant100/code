@@ -1,6 +1,10 @@
 package LeetcodeRevist.easy;
 
 import java.util.Arrays;
+import java.util.Comparator;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 public class LongestSubStr {
     //find longest common prefix
@@ -40,7 +44,12 @@ public class LongestSubStr {
     public static void main(String args[]){
         String[] s1 = {"flower","flow","flight"};
         String[] s2 = {"dog","racecar","car"};
-
+        StringBuilder sb = new StringBuilder();
+        Arrays.stream(s1).collect(Collectors.groupingBy(x->x,Collectors.counting()))
+                        .entrySet().stream().sorted(Comparator.comparing(Map.Entry::getValue))
+                        .forEach(x->{for(int i=0;i<x.getValue();i++){
+                            sb.append(x.getKey());
+                        }});
         System.out.println(longestCommonPrefix(s1));
         System.out.println(longestCommonPrefix(s2));
         System.out.println(longestCommonPrefix1(s1));
