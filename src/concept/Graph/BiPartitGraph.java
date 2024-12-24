@@ -15,7 +15,35 @@ public class BiPartitGraph {
  //   Input: graph = [[1,2,3],[0,2],[0,1,3],[0,2]]
    // Output: false
 
-    public static boolean isBiparte(int[][] gr){
+    public static boolean dfs(int[][] gr,int size,int[] color,int node,int col){
+
+
+            color[node]=col;
+            for (int it : gr[node]) {
+                if(color[it]==0){
+                    if(dfs(gr,size,color,it,-col)==false)
+                    return false;
+                } else if (color[it]==color[node]) {
+                    return false;
+                }
+
+            }
+        return true;
+
+    }
+
+    public static boolean isBiparteDFS(int[][] gr){
+        int n = gr.length;
+        int[] colour = new int[n];
+        for (int node=0;node<n;node++){
+            if(colour[node]==0) {
+                if(dfs(gr, n, colour, node,1)==false){return false;}
+            }
+        }
+        return true;
+
+    }
+    public static boolean isBiparteBFS(int[][] gr){
         int n = gr.length;
         int[] colour = new int[n];
 
@@ -44,7 +72,9 @@ public class BiPartitGraph {
     public static void main(String args[]){
         int[][] graph = {{1,2,3},{0,2},{0,1,3},{0,2}};
         int[][] gra = {{1,3},{0,2},{1,3},{0,2}};
-        System.out.println(isBiparte(graph));
-        System.out.println(isBiparte(gra));
+        System.out.println(isBiparteBFS(graph));
+        System.out.println(isBiparteBFS(gra));
+        System.out.println(isBiparteDFS(graph));
+        System.out.println(isBiparteDFS(gra));
     }
 }
