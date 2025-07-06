@@ -7,7 +7,7 @@ import java.util.stream.Collectors;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] aRgs) {
 
         Employee e1 = new Employee("ram","e123",1500000);
         Employee e6 = new Employee("ram","e123",150000);
