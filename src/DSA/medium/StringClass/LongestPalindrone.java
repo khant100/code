@@ -31,6 +31,7 @@ public class LongestPalindrone {
                 if(j-i>max&&findPalindrone(s.substring(i,j))){
                     max=j-i;
                     maxlen=s.substring(i,j);
+                    System.out.println(": "+maxlen);
                 }
 
             }
@@ -40,7 +41,7 @@ public class LongestPalindrone {
     }
     public static void main(String[] args) {
 
-        System.out.println(": " +palinDrome("aba"));
+        System.out.println(": " +palinDrome("forgeeksskeegfor"));
     }
 
 
