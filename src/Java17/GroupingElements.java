@@ -23,7 +23,7 @@ public class GroupingElements {
         );
 
         TreeMap<String,List<Employee>> groupEmployeeByDeptSorted =
-                emplist.stream().collect(Collectors.groupingBy(x->x.dept,TreeMap::new,Collectors.mapping(x->x,Collectors.toList())));
+                emplist.stream().collect(Collectors.groupingBy(x->x.dept(),TreeMap::new,Collectors.mapping(x->x,Collectors.toList())));
         groupEmployeeByDeptSorted.entrySet().forEach(System.out::println);
         LinkedHashMap<String,List<Employee>> groupEmployeeByDeptInOrder =
                 emplist.stream().collect(Collectors.groupingBy(x->x.dept, LinkedHashMap::new,Collectors.mapping(x->x,Collectors.toList())));

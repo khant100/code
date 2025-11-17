@@ -16,7 +16,7 @@ public class FiservInterview {
         map.put(3,"beti");
         map.put(4,"ram");
         map.put(5,"shyam");
-      Map<String ,Long> map1= map.values().stream().collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));
+        Map<String ,Long> map1= map.values().stream().collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));
 
      }
 }

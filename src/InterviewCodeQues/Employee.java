@@ -1,6 +1,6 @@
 package InterviewCodeQues;
 
-public class Employee{
+public  class  Employee{
     String name;
 
     @Override
@@ -12,7 +12,7 @@ public class Employee{
                 '}';
     }
 
-    String id;
+    String  id;
     Integer sal;
 
     public Employee(String name, String id, Integer sal) {
